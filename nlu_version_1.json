@@ -2586,7 +2586,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"id\" : \"{{qa_id}}\"\n}",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -2594,7 +2594,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/nianlu/dashboard/api/{{version}}/{{client_org}}/{{admin_id}}/{{skill_id}}/faqs/en",
+					"raw": "{{url}}/nianlu/dashboard/api/{{version}}/{{client_org}}/{{admin_id}}/{{skill_id}}/faqs/en?id={{qa_id}}",
 					"host": [
 						"{{url}}"
 					],
@@ -2608,6 +2608,12 @@
 						"{{skill_id}}",
 						"faqs",
 						"en"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "{{qa_id}}"
+						}
 					]
 				}
 			},
@@ -2647,7 +2653,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"id\": \"{{child_faq_folder_id}}\"\n}",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -2655,7 +2661,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/nianlu/dashboard/api/{{version}}/{{client_org}}/{{admin_id}}/{{skill_id}}/faq-tree/en",
+					"raw": "{{url}}/nianlu/dashboard/api/{{version}}/{{client_org}}/{{admin_id}}/{{skill_id}}/faq-tree/en?id={{child_faq_folder_id}}",
 					"host": [
 						"{{url}}"
 					],
@@ -2669,6 +2675,12 @@
 						"{{skill_id}}",
 						"faq-tree",
 						"en"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "{{child_faq_folder_id}}"
+						}
 					]
 				}
 			},
