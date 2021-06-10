@@ -177,6 +177,58 @@
 			"response": []
 		},
 		{
+			"name": "2.2 create predefined smalltalk",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							" pm.test(\"Status code is 200\", function (){",
+							"    pm.response.to.have.status(200);",
+							" });",
+							"",
+							"pm.test(\"Response time is less than 10000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(10000);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{superadmin_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}nianlu/dashboard/api/v1.0/{{superadmin_org}}/{{superadmin_id}}/create-predefined-smalltalk",
+					"host": [
+						"{{url}}nianlu"
+					],
+					"path": [
+						"dashboard",
+						"api",
+						"v1.0",
+						"{{superadmin_org}}",
+						"{{superadmin_id}}",
+						"create-predefined-smalltalk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "3.1  create organization",
 			"event": [
 				{
